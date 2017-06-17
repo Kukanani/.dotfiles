@@ -20,6 +20,8 @@ if [ -z ${DOTFILE_general_INSTALLED+x} ]; then
   echo "source ~/.dotfiles/bash/general.bash" >> ~/.bashrc
 
   echo "Now that Terminator is installed, you should manually configure it to allow infinite scrollback and disable scroll-on-output."
+  echo "Now that Git is installed, you should generated and register ssh keys by following the instructions at"
+  echo "https://help.github.com/articles/generating-ssh-keys/"
 ################################################################################
   echo "Finished installing $NAME"
   echo "Don't forget to run:"
