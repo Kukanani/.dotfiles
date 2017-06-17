@@ -6,7 +6,11 @@ if [ -z ${DOTFILE_general_INSTALLED+x} ]; then
 
   sudo apt install git gitk mercurial terminator
 
-  echo >> .bashrc
+  cd ~
+  # install fancy git prompt
+  git clone https://github.com/magicmonty/bash-git-prompt.git .bash-git-prompt --depth=1
+
+  echo >> ~/.bashrc
   echo "export DOTFILE_${NAME}_INSTALLED=yes" >> ~/.bashrc
   echo "source ~/.dotfiles/bash/general.bash" >> ~/.bashrc
 

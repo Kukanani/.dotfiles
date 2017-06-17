@@ -14,51 +14,24 @@ git config --global user.email adam.d.allevato@gmail.com
 # Terminal Prompt
 ###################################################################
 
-# get current branch in git repo
-function parse_git_branch() {
-  BRANCH=`git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'`
-  if [ ! "${BRANCH}" == "" ]
-  then
-    STAT=`parse_git_dirty`
-    echo "[${BRANCH}${STAT}]"
-  else
-    echo ""
-  fi
-}
+# via https://github.com/magicmonty/bash-git-prompt
+# Set config variables first
+GIT_PROMPT_ONLY_IN_REPO=1
 
-# get current status of git repo
-function parse_git_dirty {
-  status=`git status 2>&1 | tee`
-  dirty=`echo -n "${status}" 2> /dev/null | grep "modified:" &> /dev/null; echo "$?"`
-  untracked=`echo -n "${status}" 2> /dev/null | grep "Untracked files" &> /dev/null; echo "$?"`
-  ahead=`echo -n "${status}" 2> /dev/null | grep "Your branch is ahead of" &> /dev/null; echo "$?"`
-  newfile=`echo -n "${status}" 2> /dev/null | grep "new file:" &> /dev/null; echo "$?"`
-  renamed=`echo -n "${status}" 2> /dev/null | grep "renamed:" &> /dev/null; echo "$?"`
-  deleted=`echo -n "${status}" 2> /dev/null | grep "deleted:" &> /dev/null; echo "$?"`
-  bits=''
-  if [ "${renamed}" == "0" ]; then
-    bits=">${bits}"
-  fi
-  if [ "${ahead}" == "0" ]; then
-    bits="*${bits}"
-  fi
-  if [ "${newfile}" == "0" ]; then
-    bits="+${bits}"
-  fi
-  if [ "${untracked}" == "0" ]; then
-    bits="?${bits}"
-  fi
-  if [ "${deleted}" == "0" ]; then
-    bits="x${bits}"
-  fi
-  if [ "${dirty}" == "0" ]; then
-    bits="!${bits}"
-  fi
-  if [ ! "${bits}" == "" ]; then
-    echo " ${bits}"
-  else
-    echo ""
-  fi
-}
+# GIT_PROMPT_FETCH_REMOTE_STATUS=0   # uncomment to avoid fetching remote status
 
-export PS1="\[\e[106;1;30m\]\u\[\e[m\] @ \[\e[93m\]\h\[\e[m\]:\[\e[31m\]\w\[\e[m\] \`parse_git_branch\`\n\\$ "
+# GIT_PROMPT_SHOW_UPSTREAM=1 # uncomment to show upstream tracking branch
+# GIT_PROMPT_SHOW_UNTRACKED_FILES=all # can be no, normal or all; determines counting of untracked files
+
+# GIT_PROMPT_SHOW_CHANGED_FILES_COUNT=0 # uncomment to avoid printing the number of changed files
+
+# GIT_PROMPT_STATUS_COMMAND=gitstatus_pre-1.7.10.sh # uncomment to support Git older than 1.7.10
+
+GIT_PROMPT_START="\[\e[107;1;30m\]\u\[\e[m\] @ \[\e[93m\]\h\[\e[m\]:\[\e[31m\]\w\[\e[m\] "    # uncomment for custom prompt start sequence
+GIT_PROMPT_END="\n\\$ "      # uncomment for custom prompt end sequence
+
+# as last entry source the gitprompt script
+# GIT_PROMPT_THEME=Custom # use custom theme specified in file GIT_PROMPT_THEME_FILE (default ~/.git-prompt-colors.sh)
+# GIT_PROMPT_THEME_FILE=~/.git-prompt-colors.sh
+# GIT_PROMPT_THEME=Solarized # use theme optimized for solarized color scheme
+source ~/.bash-git-prompt/gitprompt.sh

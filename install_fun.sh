@@ -9,7 +9,7 @@ if [ -z ${DOTFILE_general_INSTALLED+x} ]; then
   sudo apt update
   sudo apt install steam 
 
-  echo >> .bashrc
+  echo >> ~/.bashrc
   echo "export DOTFILE_${NAME}_INSTALLED=yes" >> ~/.bashrc
 
 ################################################################################

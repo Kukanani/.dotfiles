@@ -6,7 +6,7 @@ if [ -z ${DOTFILE_graphics_INSTALLED+x} ]; then
 
   sudo apt install inkscape gimp blender openshot
 
-  echo >> .bashrc
+  echo >> ~/.bashrc
   echo "export DOTFILE_${NAME}_INSTALLED=yes" >> ~/.bashrc
   # echo "source ~/.dotfiles/bash/graphics.bash" >> ~/.bashrc
 

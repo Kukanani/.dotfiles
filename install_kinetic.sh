@@ -17,7 +17,7 @@ if [ -z ${DOTFILE_kinetic_INSTALLED+x} ]; then
 
   sudo apt install python-catkin-tools
 
-  echo >> .bashrc
+  echo >> ~/.bashrc
   echo "export DOTFILE_${NAME}_INSTALLED=yes" >> ~/.bashrc
   echo "source ~/.dotfiles/bash/ros.bash" >> ~/.bashrc
 

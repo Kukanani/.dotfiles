@@ -76,7 +76,7 @@ sudo ldconfig
 
 # To complete this step, please visit 'http://milq.github.io/install-opencv-ubuntu-debian'.
 
-  echo >> .bashrc
+  echo >> ~/.bashrc
   echo "export DOTFILE_${NAME}_INSTALLED=yes" >> ~/.bashrc
 ################################################################################
   echo "Finished installing $NAME"
