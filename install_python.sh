@@ -4,7 +4,10 @@ if [ -z ${DOTFILE_python_INSTALLED+x} ]; then
   echo "Installing $NAME..."
 ################################################################################
 
-  sudo apt install python3 virtualenv virtualenvwrapper
+  sudo apt install -y python3
+  sudo apt install -y python-dev python3-dev
+  sudo apt install -y python-pip python3-pip
+  sudo apt install -y virtualenv virtualenvwrapper
 
   echo >> ~/.bashrc
   echo "export DOTFILE_${NAME}_INSTALLED=yes" >> ~/.bashrc
