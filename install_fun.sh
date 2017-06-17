@@ -1,14 +1,16 @@
 #!/bin/bash
-NAME=python
-if [ -z ${DOTFILE_python_INSTALLED+x} ]; then
+NAME=general
+if [ -z ${DOTFILE_general_INSTALLED+x} ]; then
   echo "Installing $NAME..."
 ################################################################################
+  echo "Installation method via https://askubuntu.com/questions/257084/how-do-i-install-steam-on-a-64bit-system"
 
-  sudo apt install python3 virtualenv virtualenvwrapper
+  sudo dpkg --add-architecture i386
+  sudo apt update
+  sudo apt install steam 
 
   echo >> .bashrc
   echo "export DOTFILE_${NAME}_INSTALLED=yes" >> ~/.bashrc
-  echo "source ~/.dotfiles/bash/python.bash" >> ~/.bashrc
 
 ################################################################################
   echo "Finished installing $NAME"

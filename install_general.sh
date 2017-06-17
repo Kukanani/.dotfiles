@@ -4,7 +4,7 @@ if [ -z ${DOTFILE_general_INSTALLED+x} ]; then
   echo "Installing $NAME..."
 ################################################################################
 
-  sudo apt install git gitk mercurial
+  sudo apt install git gitk mercurial terminator
 
   echo >> .bashrc
   echo "export DOTFILE_${NAME}_INSTALLED=yes" >> ~/.bashrc
