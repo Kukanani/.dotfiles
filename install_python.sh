@@ -7,7 +7,7 @@ if [ -z ${DOTFILE_python_INSTALLED+x} ]; then
   sudo apt python3 virtualenv virtualenvwrapper
 
   echo >> .bashrc
-  echo "export DOTFILE_$NAME_INSTALLED=yes" >> ~/.bashrc
+  echo "export DOTFILE_${NAME}_INSTALLED=yes" >> ~/.bashrc
   echo "source ~/.dotfiles/bash/python.bash" >> ~/.bashrc
 
 ################################################################################

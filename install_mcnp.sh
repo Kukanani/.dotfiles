@@ -7,7 +7,7 @@ if [ -z ${DOTFILE_cuda_INSTALLED+x} ]; then
   read -p "Press any key..."
 
   echo >> .bashrc
-  echo "export DOTFILE_$NAME_INSTALLED=yes" >> ~/.bashrc
+  echo "export DOTFILE_${NAME}_INSTALLED=yes" >> ~/.bashrc
   echo "source ~/.dotfiles/bash/cuda.bash" >> ~/.bashrc
 
 ################################################################################

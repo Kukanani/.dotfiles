@@ -7,7 +7,7 @@ if [ -z ${DOTFILE_general_INSTALLED+x} ]; then
   sudo apt install git gitk mercurial
 
   echo >> .bashrc
-  echo "export DOTFILE_$NAME_INSTALLED=yes" >> ~/.bashrc
+  echo "export DOTFILE_${NAME}_INSTALLED=yes" >> ~/.bashrc
   echo "source ~/.dotfiles/bash/general.bash" >> ~/.bashrc
 
 ################################################################################

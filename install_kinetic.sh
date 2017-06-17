@@ -14,7 +14,7 @@ if [ -z ${DOTFILE_kinetic_INSTALLED+x} ]; then
   sudo apt-get install python-rosinstall
 
   echo >> .bashrc
-  echo "export DOTFILE_$NAME_INSTALLED=yes" >> ~/.bashrc
+  echo "export DOTFILE_${NAME}_INSTALLED=yes" >> ~/.bashrc
   echo "source ~/.dotfiles/bash/ros.bash" >> ~/.bashrc
 
 ################################################################################
