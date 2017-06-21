@@ -1,7 +1,8 @@
 ###################################################################
 # General stuff
 ###################################################################
-export PATH=~/.local/bin/:~/.dotfiles/:$PATH
+export PATH=~/.local/bin:~/.dotfiles/:$PATH
+export LD_LIBRARY_PATH=~/.local/lib:$LD_LIBRARY_PATH
 
 ###################################################################
 # Git
