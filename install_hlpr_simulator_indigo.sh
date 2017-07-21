@@ -53,6 +53,7 @@ if [ -z ${DOTFILE_hlpr_simulator_indigo_INSTALLED+x} ]; then
   # nano vector_v1/vector_network/env-hooks/50.vector_network_config.sh
   cd ../..
 
+  # if this messes up, just clone the hlpr_documentation wiki and find the exact tags in plaintext file, then paste them into the filename referenced.
   echo '
   <library path="lib/libhector_pose_estimation_nodelet">
   <class name="hector_pose_estimation/PoseEstimationNodelet" type="hector_pose_estimation::PoseEstimationNodelet" base_class_type="nodelet::Nodelet">
