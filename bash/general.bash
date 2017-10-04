@@ -2,14 +2,7 @@
 # General stuff
 ###################################################################
 export PATH=~/.local/bin:~/.dotfiles/:$PATH
-export LD_LIBRARY_PATH=~/.local/lib:$LD_LIBRARY_PATH
-
-###################################################################
-# Git
-###################################################################
-
-git config --global user.name "Adam Allevato"
-git config --global user.email adam.d.allevato@gmail.com
+export LD_LIBRARY_PATH=~/.local/lib:~/.local/lib/x86_64-linux-gnu/:$LD_LIBRARY_PATH
 
 ###################################################################
 # Terminal Prompt
