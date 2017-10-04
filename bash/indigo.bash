@@ -2,7 +2,9 @@
 # ROS
 ###################################################################
 # Add your main repo to your path. Only the last item in this list matters, each will overwrite the previous one.
-source /opt/ros/indigo/setup.bash
+# source /opt/ros/kinetic/setup.bash
+alias indigo='source /opt/ros/indigo/setup.bash'
+alias kinetic='source /opt/ros/kinetic/setup.bash'
 
 # Source the current repo, replacing any previous repo sourcing commands
 alias sourcethis='unset CMAKE_PREFIX_PATH;source ./devel/setup.bash'
