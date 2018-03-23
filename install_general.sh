@@ -9,7 +9,7 @@ sudo apt update
 # Git
 ###################################################################
 
-sudo apt install git gitk
+sudo apt install -y git
 git config --global user.name "Adam Allevato"
 git config --global user.email "Kukanani@users.noreply.github.com"
 
@@ -17,13 +17,13 @@ git config --global user.email "Kukanani@users.noreply.github.com"
 cd ~
 git clone https://github.com/magicmonty/bash-git-prompt.git .bash-git-prompt --depth=1
 
-sudo apt install mercurial terminator unzip sublime-text
+sudo apt install -y mercurial terminator unzip git gitk curl vim
 
 # install GIF screen capture program
 # PPAs do not exist on 14 or below. Use silentcast (https://github.com/colinkeenan/silentcast)
-sudo add-apt-repository ppa:peek-developers/stable
-sudo apt update
-sudo apt install peek
+# sudo add-apt-repository ppa:peek-developers/stable
+# sudo apt update
+# sudo apt install peek
 
 echo >> ~/.bashrc
 echo "export DOTFILE_${NAME}_INSTALLED=yes" >> ~/.bashrc

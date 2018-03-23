@@ -1,5 +1,5 @@
 #!/bin/bash
-sudo apt install git
+sudo apt install -y git
 
 cd ~
 git clone https://github.com/Kukanani/.dotfiles.git
