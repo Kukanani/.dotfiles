@@ -7,6 +7,7 @@ sudo apt-get update
 sudo apt-get install -y git
 git config --global user.name "Adam Allevato"
 git config --global user.email "Kukanani@users.noreply.github.com"
+git config --global credential.helper 'cache --timeout=3600'
 
 # install fancy git prompt
 cd ~
