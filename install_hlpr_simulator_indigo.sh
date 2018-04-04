@@ -61,7 +61,7 @@ if [ -z ${DOTFILE_hlpr_simulator_indigo_INSTALLED+x} ]; then
     This nodelet initializes the pose estimation filter with a generic system model driven by IMU measurements only.
   </description>
   </class>
-  </library>' > /opt/ros/indigo/share/hector_pose_estimation/hector_pose_estimation_nodelets.xml
+  </library>' > /opt/ros/${ROSDISTRO}/share/hector_pose_estimation/hector_pose_estimation_nodelets.xml
 
   # Install HLP-R Manipulation Stack
   sudo apt install -y \

@@ -13,6 +13,9 @@ if [ -z ${DOTFILE_kinetic_INSTALLED+x} ]; then
   rosdep update
   sudo apt install python-rosinstall
 
+# add to dialout group to avoid having to sudo chmod everytime something connects
+  sudo adduser adam dialout
+
 # additional stuff
 
   sudo apt install python-catkin-tools

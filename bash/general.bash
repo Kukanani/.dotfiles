@@ -4,6 +4,19 @@
 export PATH=~/.local/bin:~/.dotfiles/:$PATH
 export LD_LIBRARY_PATH=~/.local/lib:~/.local/lib/x86_64-linux-gnu/:$LD_LIBRARY_PATH
 
+# .bashrc quality of life
+alias bashrc='subl ~/.bashrc'
+alias bs='source ~/.bashrc'
+
+###################################################################
+# GitHub hub
+###################################################################
+
+### Load Hub Linux bash completion
+if [ -f $HOME/Apps/github-hub/etc/hub.bash_completion.sh ] ; then
+     . $HOME/Apps/github-hub/etc/hub.bash_completion.sh
+fi
+
 ###################################################################
 # Terminal Prompt
 ###################################################################

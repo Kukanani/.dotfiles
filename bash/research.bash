@@ -1,0 +1,1 @@
+alias mjpython='MJPYTHON=1 LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libGLEW.so:/usr/lib/nvidia-384/libGL.so.1 python3'
