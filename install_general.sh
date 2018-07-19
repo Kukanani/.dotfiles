@@ -21,13 +21,19 @@ sudo apt-get update
 sudo apt-get install -y sublime-text
 
 # other utilites
-sudo apt-get install -y mercurial terminator unzip curl gitk
+sudo apt-get install -y mercurial terminator unzip curl gitk vim trash-cli
 echo "Now that Terminator is installed, you should manually configure it to allow infinite scrollback and disable scroll-on-output."
 
 # Increase number of filesystem watches to allow for IntelliJ, Sublime etc.
 #  to notice file changes more quickly
 # See https://confluence.jetbrains.com/display/IDEADEV/Inotify+Watches+Limit
 echo "fs.inotify.max_user_watches = 524288" | sudo tee -a /etc/sysctl.conf
+
+# Copy .rc files
+cp ~/.screenrc ~/.screenrc.old
+cp .screenrc ~/.screenrc
+cp ~/.vimrc ~/.vimrc.old
+cp .vimrc ~/.vimrc
 
 echo "source ~/.dotfiles/bash/general.bash" >> ~/.bashrc
 ################################################################################
