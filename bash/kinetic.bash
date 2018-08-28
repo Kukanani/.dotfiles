@@ -33,13 +33,19 @@ alias sourcethis='unset CMAKE_PREFIX_PATH;source ./devel/setup.bash'
 alias roshome='cd $(echo $CMAKE_PREFIX_PATH | cut -d ':' -f 1);cd ..'
 
 # Automatic catkin_make from any folder (use in conjunction with the above one-liner)
-alias cb='(roshome && exec catkin build --summarize)'
+cb() {
+  (roshome && exec catkin build --summarize "$@")
+}
 
 # Automatic catkin_make from any folder (use in conjunction with the above one-liner)
-alias cm='(roshome && exec catkin_make)'
+cm() {
+  (roshome && exec catkin_make "$@")
+}
 
 # Automatic catkin_make from any folder (use in conjunction with the above one-liner)
-alias cmi='(roshome && exec catkin_make_isolated --install)'
+cmi() {
+  (roshome && exec catkin_make_isolated --install "$@")
+}
 
 # Clean catkin_make (delete the generated folders, then catkin_make)
 alias cmclean='(roshome && rm -rf build devel install && cm)'
@@ -57,3 +63,8 @@ export ROSCONSOLE_FORMAT='[${severity}] ${message}'
 
 # Export a package config, helps with finding some manually installed packages
 export PKG_CONFIG_PATH=/home/adam/.local/lib/pkgconfig/:$PKG_CONFIG_PATH
+
+memaster() {
+    export ROS_MASTER_URI=http://localhost:11311/
+    export ROS_IP=127.0.0.1
+}

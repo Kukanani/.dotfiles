@@ -1,10 +1,13 @@
 #!/bin/bash
-NAME=fun
-if [ -z ${DOTFILE_fun_INSTALLED+x} ]; then
+NAME=steam
+if [ -z ${DOTFILE_steam_INSTALLED+x} ]; then
   echo "Installing $NAME..."
 ################################################################################
+  echo "Installation method via https://askubuntu.com/questions/257084/how-do-i-install-steam-on-a-64bit-system"
+
+  sudo dpkg --add-architecture i386
   sudo apt update
-  sudo apt install figlet lolcat sl cowsay
+  sudo apt install steam
 
   echo >> ~/.bashrc
   echo "export DOTFILE_${NAME}_INSTALLED=yes" >> ~/.bashrc
