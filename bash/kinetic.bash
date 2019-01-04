@@ -4,7 +4,7 @@
 alias sourceros='source /opt/ros/kinetic/setup.bash'
 # Add your main repo to your path. Only the last sourcing matters, it will
 # overwrite all previous ones
-sourceros
+# sourceros
 
 unsourceros() {
 unset CMAKE_PREFIX_PATH

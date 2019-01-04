@@ -21,7 +21,7 @@ sudo apt-get update
 sudo apt-get install -y sublime-text
 
 # other utilites
-sudo apt-get install -y mercurial terminator unzip curl gitk vim trash-cli
+sudo apt-get install -y mercurial terminator unzip curl gitk vim trash-cli meld
 echo "Now that Terminator is installed, you should manually configure it to allow infinite scrollback and disable scroll-on-output."
 
 # Increase number of filesystem watches to allow for IntelliJ, Sublime etc.
