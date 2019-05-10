@@ -9,15 +9,6 @@ alias bashrc='subl ~/.bashrc'
 alias bs='source ~/.bashrc'
 
 ###################################################################
-# GitHub hub
-###################################################################
-
-### Load Hub Linux bash completion
-if [ -f $HOME/Apps/github-hub/etc/hub.bash_completion.sh ] ; then
-     . $HOME/Apps/github-hub/etc/hub.bash_completion.sh
-fi
-
-###################################################################
 # Terminal Prompt
 ###################################################################
 
@@ -42,3 +33,8 @@ GIT_PROMPT_END="\n\\$ "      # uncomment for custom prompt end sequence
 # GIT_PROMPT_THEME_FILE=~/.git-prompt-colors.sh
 # GIT_PROMPT_THEME=Solarized # use theme optimized for solarized color scheme
 source ~/.bash-git-prompt/gitprompt.sh
+
+###################################################################
+# Terminal Prompt
+###################################################################
+alias tasks='git grep -EI "TODO|FIXME"'
