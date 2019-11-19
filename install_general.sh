@@ -13,6 +13,15 @@ git config --global credential.helper 'cache --timeout=3600'
 cd ~
 git clone https://github.com/magicmonty/bash-git-prompt.git .bash-git-prompt --depth=1
 
+# python
+python3 -m pip install --user powerline-status
+sudo apt install fonts-powerline
+
+# install tmux conf
+git clone https://github.com/gpakosz/.tmux.git .tmux
+
+cp .tmux/.tmux.conf.local .
+
 # sublime
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
 sudo apt-get install -y apt-transport-https
@@ -31,9 +40,10 @@ echo "fs.inotify.max_user_watches = 524288" | sudo tee -a /etc/sysctl.conf
 
 # Copy .rc files
 cp ~/.screenrc ~/.screenrc.old
-cp .screenrc ~/.screenrc
+ln -s -f ~/.dotfiles/.screenrc ~/.screenrc
 cp ~/.vimrc ~/.vimrc.old
-cp .vimrc ~/.vimrc
+ln -s -f ~/.dotfiles/.vimrc ~/.vimrc
+ln -s -f ~/.dotfiles/.tmux.conf ~/.tmux.conf
 
 echo "source ~/.dotfiles/bash/general.bash" >> ~/.bashrc
 ################################################################################
