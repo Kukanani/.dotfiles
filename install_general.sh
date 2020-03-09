@@ -11,6 +11,7 @@ git config --global credential.helper 'cache --timeout=3600'
 cd ~
 git clone https://github.com/magicmonty/bash-git-prompt.git .bash-git-prompt --depth=1
 
+sudo apt-get install -y firefox
 # other utilites
 sudo apt-get install -y terminator unzip curl gitk vim trash-cli meld tmux
 echo "Now that Terminator is installed, you should manually configure it to allow infinite scrollback and disable scroll-on-output."
