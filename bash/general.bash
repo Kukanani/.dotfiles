@@ -10,11 +10,8 @@ alias bs='source ~/.bashrc'
 # kill vscode instances
 alias killcode='kill -9 $(ps aux | grep "[u]sr/share/code/code" | tr -s " " | cut -d" " -f2)'
 
-# TODO
-# shorthand
-alias todo="~/.todoist/todoist_linux_amd64"
-# today
-alias tt="~/.todoist/todoist_linux_amd64 --color --header --namespace --indent --project-namespace list --filter '(overdue | today)'"
+# clipboard
+alias xclip="xclip -sel clip"
 
 ###################################################################
 # Terminal Prompt

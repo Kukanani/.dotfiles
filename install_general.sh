@@ -13,7 +13,7 @@ git clone https://github.com/magicmonty/bash-git-prompt.git .bash-git-prompt --d
 
 sudo apt-get install -y firefox
 # other utilites
-sudo apt-get install -y terminator unzip curl gitk vim trash-cli meld tmux
+sudo apt-get install -y terminator unzip curl gitk vim trash-cli meld tmux wget htop
 echo "Now that Terminator is installed, you should manually configure it to allow infinite scrollback and disable scroll-on-output."
 # Joplin (notes)
 wget -O - https://raw.githubusercontent.com/laurent22/joplin/master/Joplin_install_and_update.sh | bash
@@ -24,8 +24,6 @@ sudo apt-get install -y xournal pdfshuffler
 sudo snap install krop
 # fun
 sudo apt-get install -y lolcat cowsay figlet
-mkdir ~/todoist
-curl -JL https://github.com/sachaos/todoist/releases/latest/download/todoist_linux_amd64 -o ~/todoist/todoist_linux_amd64
 
 # Copy .rc files
 cp ~/.screenrc ~/.screenrc.old
