@@ -30,6 +30,8 @@ cp ~/.screenrc ~/.screenrc.old
 ln -s -f ~/.dotfiles/.screenrc ~/.screenrc
 cp ~/.vimrc ~/.vimrc.old
 ln -s -f ~/.dotfiles/.vimrc ~/.vimrc
+cp ~/.emacs ~/.emacs.old
+ln -s -f ~/.dotfiles/.emacs ~/.emacs
 # tmux from a repo
 git clone https://github.com/gpakosz/.tmux.git ~/.tmux
 ln -s -f ~/.tmux/.tmux.conf ~/.tmux.conf
