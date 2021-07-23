@@ -16,9 +16,11 @@ sudo apt-get install -y firefox
 # basic utilites
 sudo apt-get install -yq \
     curl \
+    flameshot \
     gitk \
     htop \
     meld \
+    peek \
     terminator \
     tmux \
     trash-cli \
