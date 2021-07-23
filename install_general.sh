@@ -19,6 +19,14 @@ echo "Now that Terminator is installed, you should manually configure it to allo
 wget -O - https://raw.githubusercontent.com/laurent22/joplin/master/Joplin_install_and_update.sh | bash
 # Visual Studio Code
 sudo snap install --classic code
+
+# GitHub CLI
+# https://github.com/cli/cli
+curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo gpg --dearmor -o /usr/share/keyrings/githubcli-archive-keyring.gpg
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
+sudo apt update
+sudo apt install gh
+
 # PDF editors
 sudo apt-get install -y xournal pdfshuffler
 sudo snap install krop
