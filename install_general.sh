@@ -32,6 +32,9 @@ cp ~/.vimrc ~/.vimrc.old
 ln -s -f ~/.dotfiles/.vimrc ~/.vimrc
 cp ~/.emacs ~/.emacs.old
 ln -s -f ~/.dotfiles/.emacs ~/.emacs
+cp -R ~/.config/terminator ~/.config/terminator.old
+ln -s -f ~/.dotfiles/.terminator_config ~/.config/terminator
+
 # tmux from a repo
 git clone https://github.com/gpakosz/.tmux.git ~/.tmux
 ln -s -f ~/.tmux/.tmux.conf ~/.tmux.conf
