@@ -12,12 +12,29 @@ cd ~
 git clone https://github.com/magicmonty/bash-git-prompt.git .bash-git-prompt --depth=1
 
 sudo apt-get install -y firefox
-# other utilites
-sudo apt-get install -y terminator unzip curl gitk vim trash-cli meld tmux wget htop xclip vlc
-echo "Now that Terminator is installed, you should manually configure it to allow infinite scrollback and disable scroll-on-output."
+
+# basic utilites
+sudo apt-get install -yq \
+    curl \
+    gitk \
+    htop \
+    meld \
+    terminator \
+    tmux \
+    trash-cli \
+    unzip \
+    vim \
+    vlc \
+    wget \
+    xclip \
+;
+
 # Joplin (notes)
+# https://joplinapp.org/help/#desktop-applications
 wget -O - https://raw.githubusercontent.com/laurent22/joplin/master/Joplin_install_and_update.sh | bash
+
 # Visual Studio Code
+# https://code.visualstudio.com/docs/setup/linux
 sudo snap install --classic code
 
 # GitHub CLI
