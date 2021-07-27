@@ -67,6 +67,10 @@ git clone https://github.com/gpakosz/.tmux.git ~/.tmux
 ln -s -f ~/.tmux/.tmux.conf ~/.tmux.conf
 ln -s -f ~/.tmux/.tmux.conf.local ~/.tmux.conf.local
 
+# eternal bash history setup
+sed -i 's/HISTSIZE/# HISTSIZE/; s/HISTFILESIZE/# HISTFILESIZE/' ~/.bashrc
+cat ~/.bash_history >>~/.bash_eternal_history
+
 echo "source ~/.dotfiles/bash/general.bash" >> ~/.bashrc
 
 echo "Don't forget to run:"
