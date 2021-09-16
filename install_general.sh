@@ -67,11 +67,18 @@ git clone https://github.com/gpakosz/.tmux.git ~/.tmux
 ln -s -f ~/.tmux/.tmux.conf ~/.tmux.conf
 ln -s -f ~/.tmux/.tmux.conf.local ~/.tmux.conf.local
 
-# eternal bash history setup
+# eternal bash history setup - comment out lines that shrink history in bashrc
 sed -i 's/HISTSIZE/# HISTSIZE/; s/HISTFILESIZE/# HISTFILESIZE/' ~/.bashrc
-cat ~/.bash_history >>~/.bash_eternal_history
 
 echo "source ~/.dotfiles/bash/general.bash" >> ~/.bashrc
 
 echo "Don't forget to run:"
 echo ". ~/.bashrc"
+
+# Basic quality-of-life GNOME improvements
+
+# don't show windows that are in one workspace in another workspace's Dock
+gsettings set org.gnome.shell.extensions.dash-to-dock isolate-workspaces true
+# When using the alt-` switcher, don't show apps on other workspaces
+# Note: The alt-tab switcher already isolates properly without any settings changes
+gsettings set org.gnome.shell.app-switcher current-workspace-only true
