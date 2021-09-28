@@ -13,17 +13,39 @@ git clone https://github.com/magicmonty/bash-git-prompt.git .bash-git-prompt --d
 
 sudo apt-get install -y firefox
 # other utilites
-sudo apt-get install -y terminator unzip curl gitk vim trash-cli meld tmux wget htop xclip vlc
+sudo apt-get install -yq \
+    curl \
+    gitk \
+    htop \
+    meld \
+    terminator \
+    tmux \
+    trash-cli \
+    unzip \
+    vim \
+    vlc \
+    wget \
+    xclip \
+;
 echo "Now that Terminator is installed, you should manually configure it to allow infinite scrollback and disable scroll-on-output."
+# Flameshot (screenshot tool)
+sudo snap install flameshot
 # Joplin (notes)
 wget -O - https://raw.githubusercontent.com/laurent22/joplin/master/Joplin_install_and_update.sh | bash
 # Visual Studio Code
 sudo snap install --classic code
 # PDF editors
-sudo apt-get install -y xournal pdfshuffler
+sudo apt-get install -yq xournal pdfshuffler
 sudo snap install krop
 # fun
-sudo apt-get install -y lolcat cowsay figlet
+sudo apt-get install -yq lolcat cowsay figlet
+# Element (messenger)
+# Instructions from https://element.io/get-started
+sudo apt install -yq wget apt-transport-https
+sudo wget -O /usr/share/keyrings/riot-im-archive-keyring.gpg https://packages.riot.im/debian/riot-im-archive-keyring.gpg
+echo "deb [signed-by=/usr/share/keyrings/riot-im-archive-keyring.gpg] https://packages.riot.im/debian/ default main" | sudo tee /etc/apt/sources.list.d/riot-im.list
+sudo apt update
+sudo apt install -yq element-desktop
 
 # Copy .rc files
 cp ~/.screenrc ~/.screenrc.old
