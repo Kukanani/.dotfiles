@@ -16,6 +16,7 @@ sudo apt-get install -y firefox
 # basic utilites
 sudo apt-get install -yq \
     curl \
+    direnv \
     flameshot \
     gitk \
     htop \
