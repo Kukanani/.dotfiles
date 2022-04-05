@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash
 sudo apt-get update
 
 ###################################################################
@@ -10,7 +10,7 @@ git config --global user.email "Kukanani@users.noreply.github.com"
 git config --global credential.helper 'cache --timeout=3600'
 
 # install fancy git prompt
-cd ~
+cd ~ || exit
 git clone https://github.com/magicmonty/bash-git-prompt.git .bash-git-prompt --depth=1
 
 # other utilites

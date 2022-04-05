@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash
 sudo apt-get update
 
 # Git
@@ -8,7 +8,7 @@ git config --global user.email "Kukanani@users.noreply.github.com"
 git config --global credential.helper 'cache --timeout=3600'
 
 # install fancy git prompt
-cd ~
+cd ~ || exit
 git clone https://github.com/magicmonty/bash-git-prompt.git .bash-git-prompt --depth=1
 
 sudo apt-get install -y firefox
@@ -38,6 +38,11 @@ wget -O - https://raw.githubusercontent.com/laurent22/joplin/master/Joplin_insta
 # Visual Studio Code
 # https://code.visualstudio.com/docs/setup/linux
 sudo snap install --classic code
+# ...and extensions
+# shellcheck disable=2162
+while read e; do
+    code --install-extension "$e"
+done <~/.dotfiles/vs-extensions.txt
 
 # GitHub CLI
 # https://github.com/cli/cli
