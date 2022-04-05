@@ -16,6 +16,7 @@ sudo apt-get install -y firefox
 # basic utilites
 sudo apt-get install -yq \
     curl \
+    direnv \
     flameshot \
     gitk \
     htop \
@@ -30,7 +31,6 @@ sudo apt-get install -yq \
     wget \
     xclip \
 ;
-
 # Joplin (notes)
 # https://joplinapp.org/help/#desktop-applications
 wget -O - https://raw.githubusercontent.com/laurent22/joplin/master/Joplin_install_and_update.sh | bash
@@ -52,10 +52,17 @@ sudo apt update
 sudo apt install gh
 
 # PDF editors
-sudo apt-get install -y xournal pdfshuffler
+sudo apt-get install -yq xournal pdfshuffler
 sudo snap install krop
 # fun
-sudo apt-get install -y lolcat cowsay figlet
+sudo apt-get install -yq lolcat cowsay figlet
+# Element (messenger)
+# Instructions from https://element.io/get-started
+sudo apt install -yq wget apt-transport-https
+sudo wget -O /usr/share/keyrings/riot-im-archive-keyring.gpg https://packages.riot.im/debian/riot-im-archive-keyring.gpg
+echo "deb [signed-by=/usr/share/keyrings/riot-im-archive-keyring.gpg] https://packages.riot.im/debian/ default main" | sudo tee /etc/apt/sources.list.d/riot-im.list
+sudo apt update
+sudo apt install -yq element-desktop
 
 # Copy .rc files
 cp ~/.screenrc ~/.screenrc.old
