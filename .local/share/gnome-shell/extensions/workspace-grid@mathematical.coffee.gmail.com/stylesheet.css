@@ -1,0 +1,72 @@
+/***********************************************************************
+ * Copyright (C)      2015 Foivos S. Zakkak <foivos@zakkak.net         *
+ * Copyright (C) 2012-2014 Amy Chan <mathematical.coffee@gmail.com>         *
+ *                                                                     *
+ * This program is free software: you can redistribute it and/or       *
+ * modify it under the terms of the GNU General Public License as      *
+ * published by the Free Software Foundation, either version 3 of the  *
+ * License, or (at your option) any later version.                     *
+ *                                                                     *
+ * This program is distributed in the hope that it will be useful, but *
+ * WITHOUT ANY WARRANTY; without even the implied warranty of          *
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU   *
+ * General Public License for more details.                            *
+ *                                                                     *
+ * You should have received a copy of the GNU General Public License   *
+ * along with this program.  If not, see                               *
+ * <http://www.gnu.org/licenses/>.                                     *
+ ***********************************************************************/
+
+.workspace-switcher {
+    background: transparent;
+    border: 0px;
+    border-radius: 0px;
+    padding: 0px;
+    spacing: 8px;
+}
+
+.workspace-switcher-group {
+    padding: 10px;
+}
+
+.workspace-switcher-container {
+    background: transparent;
+    background-color: rgba(0, 0, 0, 0.33);
+    border-image: none;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+/* Note:
+ * .ws-switcher-active-{up,down} are already in the global .css so we override them here.
+ */
+.ws-switcher-active-left,
+.ws-switcher-active-right,
+.ws-switcher-active-up,
+.ws-switcher-active-down,
+.ws-switcher-box {
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0.33);
+    background-image: none;
+    border-color: rgba(0, 0, 0, 0.33);
+    border-radius: 8px;
+    border: none;
+}
+
+.ws-switcher-active-left,
+.ws-switcher-active-right,
+.ws-switcher-active-up,
+.ws-switcher-active-down {
+    background-color: rgba(32, 96, 152, 0.8);
+}
+
+.ws-switcher-label {
+    color: rgba(255, 255, 255, 0.80);
+    font-size: 2em;
+}
+
+/* Drawn around the workspace we are going to drop on in thumbnails box */
+.workspace-thumbnail-drop-indicator {
+    box-shadow: 0px 0px 4px 6px white;
+    border: 1px solid #0e0e0e;
+}

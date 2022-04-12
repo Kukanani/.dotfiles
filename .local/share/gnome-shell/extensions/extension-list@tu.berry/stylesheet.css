@@ -1,0 +1,20 @@
+.extension-list-item {
+    /* max-width: 300px; */
+}
+
+.extension-list-label-error {
+    color: red;
+}
+
+.extension-list-scroll-menu {
+    /* max-height: 200px; */
+}
+
+.extension-list-prefs-button {
+    padding: 0 5px;
+}
+
+.extension-list-button:hover {
+    color: deepskyblue;
+}
+

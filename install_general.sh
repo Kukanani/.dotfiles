@@ -89,8 +89,13 @@ echo ". ~/.bashrc"
 
 # Basic quality-of-life GNOME improvements
 
-# don't show windows that are in one workspace in another workspace's Dock
-gsettings set org.gnome.shell.extensions.dash-to-dock isolate-workspaces true
-# When using the alt-` switcher, don't show apps on other workspaces
-# Note: The alt-tab switcher already isolates properly without any settings changes
-gsettings set org.gnome.shell.app-switcher current-workspace-only true
+# load gnome extensions
+# if you want to save your current extensions to this repo, run:
+# cp -R ~/.local/share/gnome-shell/extensions ~/.dotfiles/.local/share/gnome-shell
+mkdir -p ~/.local/share/gnome-shell/extensions
+cp -R ~/.dotfiles/.local/share/gnome-shell/extensions ~/.local/share/gnome-shell
+
+# load gnome settings
+# if you want to save your current settings to this repo, run:
+# dconf dump / > ~/.dotfiles/saved_settings.dconf
+dconf load / < ~/.dotfiles/saved_settings.dconf
