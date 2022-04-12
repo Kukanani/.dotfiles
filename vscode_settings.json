@@ -1,0 +1,87 @@
+{
+    "security.workspace.trust.untrustedFiles": "open",
+    "editor.minimap.enabled": false,
+    "editor.rulers": [
+        79,
+        88,
+        120
+    ],
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    },
+    "python.formatting.autopep8Args": [
+        "--max-line-length=120"
+    ],
+    "editor.mouseWheelZoom": true,
+    "ros.distro": "noetic",
+    "[python]": {
+        "editor.rulers": [
+            79,
+            88,
+            120
+        ]
+    },
+    "terminal.integrated.inheritEnv": true,
+    "python.formatting.provider": "black",
+    "redhat.telemetry.enabled": false,
+    "python.formatting.blackArgs": [
+        "--skip-string-normalization"
+    ],
+    "[xml]": {
+        "editor.tabSize": 2
+    },
+    "[test]": {
+        "editor.tabSize": 2
+    },
+    "[launch]": {
+        "editor.tabSize": 2
+    },
+    "yaml.schemas": {
+        "file:///home/aallevato/.vscode/extensions/atlassian.atlascode-2.10.11/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+    },
+    "atlascode.jira.enabled": true,
+    "atlascode.bitbucket.enabled": false,
+    "atlascode.jira.jqlList": [
+        {
+            "id": "1baab887-f95a-4ce9-9823-6526a70b2f29",
+            "enabled": true,
+            "name": "My diligentrobots Issues",
+            "query": "assignee = currentUser() AND resolution = Unresolved ORDER BY lastViewed DESC",
+            "siteId": "001e8664-2379-44b5-be70-7576a3d6e51c",
+            "monitor": true
+        }
+    ],
+    "markdownlint.focusMode": true,
+    "atlascode.jira.lastCreateSiteAndProject": {
+        "siteId": "001e8664-2379-44b5-be70-7576a3d6e51c",
+        "projectKey": ""
+    },
+    "terminal.integrated.automationShell.linux": "/bin/bash",
+    "terminal.integrated.profiles.linux": {
+        "bash": {
+            "path": "/bin/bash"
+        },
+    },
+    "explorer.confirmDragAndDrop": false,
+    "markdown-checkbox.dateWhenChecked": false,
+    "markdown-checkbox.italicWhenChecked": false,
+    "markdown-checkbox.strikeThroughWhenChecked": false,
+    "markdown-checkbox.typeOfBulletPoint": "-",
+    "markdown-checkbox.checkmark": "x",
+    "[cpp]": {
+        "editor.defaultFormatter": "ms-iot.vscode-ros"
+    },
+    "[markdown]": {
+        "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+    },
+    "search.exclude": {
+        "**/build": true,
+        "diligent_sdk": true,
+        "scheduler": true
+    },
+    "window.zoomLevel": 1
+}

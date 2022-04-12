@@ -43,6 +43,9 @@ sudo snap install --classic code
 while read e; do
     code --install-extension "$e"
 done <~/.dotfiles/vs-extensions.txt
+# ...and link preferences
+mkdir -p ~/.config/Code/User
+ln -s -f ~/.dotfiles/vscode_settings.json ~/.config/Code/User/settings.json
 
 # GitHub CLI
 # https://github.com/cli/cli
