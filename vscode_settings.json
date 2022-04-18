@@ -83,5 +83,5 @@
         "diligent_sdk": true,
         "scheduler": true
     },
-    "window.zoomLevel": 1
+    "cmake.configureOnOpen": false
 }

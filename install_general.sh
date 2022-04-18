@@ -1,6 +1,10 @@
 #!/bin/bash
 sudo apt-get update
 
+# Increase inotify limit for large file systems etc. See:
+# https://askubuntu.com/questions/1088272/inotify-add-watch-failed-no-space-left-on-device
+echo fs.inotify.max_user_watches=65536 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
+
 # Git
 sudo apt-get install -y git
 git config --global user.name "Adam Allevato"
