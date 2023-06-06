@@ -1,11 +1,23 @@
 #!/bin/bash
-sudo apt-get update
 
-# Increase inotify limit for large file systems etc. See:
-# https://askubuntu.com/questions/1088272/inotify-add-watch-failed-no-space-left-on-device
-echo fs.inotify.max_user_watches=65536 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
+# preauth sudo
+sudo -v
+
+# Set up SSH keys and Git
+echo "Create SSH key"
+echo "https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent"
+read -r "press enter when done"
+
+echo "Add SSH key to GitHub"
+echo "https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account"
+read -r "press enter when done"
+
+echo "Add SSH key to GitLab"
+echo "https://docs.gitlab.com/ee/user/ssh.html#add-an-ssh-key-to-your-gitlab-account"
+read -r "press enter when done"
 
 # Git
+sudo apt-get update
 sudo apt-get install -y git
 git config --global user.name "Adam Allevato"
 git config --global user.email "Kukanani@users.noreply.github.com"
@@ -42,14 +54,6 @@ wget -O - https://raw.githubusercontent.com/laurent22/joplin/master/Joplin_insta
 # Visual Studio Code
 # https://code.visualstudio.com/docs/setup/linux
 sudo snap install --classic code
-# ...and extensions
-# shellcheck disable=2162
-while read e; do
-    code --install-extension "$e"
-done <~/.dotfiles/vs-extensions.txt
-# ...and link preferences
-mkdir -p ~/.config/Code/User
-ln -s -f ~/.dotfiles/vscode_settings.json ~/.config/Code/User/settings.json
 
 # GitHub CLI
 # https://github.com/cli/cli
@@ -63,13 +67,6 @@ sudo apt-get install -yq xournal pdfshuffler
 sudo snap install krop
 # fun
 sudo apt-get install -yq lolcat cowsay figlet
-# Element (messenger)
-# Instructions from https://element.io/get-started
-sudo apt install -yq wget apt-transport-https
-sudo wget -O /usr/share/keyrings/riot-im-archive-keyring.gpg https://packages.riot.im/debian/riot-im-archive-keyring.gpg
-echo "deb [signed-by=/usr/share/keyrings/riot-im-archive-keyring.gpg] https://packages.riot.im/debian/ default main" | sudo tee /etc/apt/sources.list.d/riot-im.list
-sudo apt update
-sudo apt install -yq element-desktop
 
 # Copy .rc files
 cp ~/.screenrc ~/.screenrc.old
@@ -93,6 +90,17 @@ echo "source ~/.dotfiles/bash/general.bash" >> ~/.bashrc
 
 echo "Don't forget to run:"
 echo ". ~/.bashrc"
+
+## Remove pointless folders
+rm -rf ~/Videos
+rm -rf ~/Public
+rm -rf ~/Templates
+rm -rf ~/Music
+rm -rf ~/Public
+
+# Increase inotify limit for large file systems etc. See:
+# https://askubuntu.com/questions/1088272/inotify-add-watch-failed-no-space-left-on-device
+echo fs.inotify.max_user_watches=65536 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
 
 # Basic quality-of-life GNOME improvements
 
