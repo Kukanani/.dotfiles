@@ -40,7 +40,7 @@
         "editor.tabSize": 2
     },
     "yaml.schemas": {
-        "file:///home/aallevato/.vscode/extensions/atlassian.atlascode-3.0.1/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+        "file:///home/aallevato/.vscode/extensions/atlassian.atlascode-3.0.3/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
     },
     "markdownlint.focusMode": true,
     "terminal.integrated.profiles.linux": {
