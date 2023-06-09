@@ -20,7 +20,7 @@ read -r "press enter when done"
 
 # Git
 sudo apt-get update
-sudo apt-get install -y git
+sudo apt-get install -yq git
 git config --global user.name "Adam Allevato"
 git config --global user.email "Kukanani@users.noreply.github.com"
 git config --global credential.helper 'cache --timeout=3600'
@@ -29,7 +29,7 @@ git config --global credential.helper 'cache --timeout=3600'
 cd ~ || exit
 git clone https://github.com/magicmonty/bash-git-prompt.git .bash-git-prompt --depth=1
 
-sudo apt-get install -y firefox
+sudo apt-get install -yq firefox
 
 # basic utilites
 sudo apt-get install -yq \
@@ -62,7 +62,7 @@ sudo snap install --classic code
 curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo gpg --dearmor -o /usr/share/keyrings/githubcli-archive-keyring.gpg
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
 sudo apt update
-sudo apt install gh
+sudo apt install -yq gh
 
 # PDF editors
 sudo apt-get install -yq xournal pdfshuffler
@@ -109,6 +109,7 @@ echo fs.inotify.max_user_watches=65536 | sudo tee -a /etc/sysctl.conf && sudo sy
 # load gnome extensions
 # if you want to save your current extensions to this repo, run:
 # cp -R ~/.local/share/gnome-shell/extensions ~/.dotfiles/.local/share/gnome-shell
+sudo apt install -yq chrome-gnome-shell
 mkdir -p ~/.local/share/gnome-shell/extensions
 cp -R ~/.dotfiles/.local/share/gnome-shell/extensions ~/.local/share/gnome-shell
 
@@ -125,4 +126,4 @@ sudo mkdir -p /etc/debsig/policies/AC2D62742012EA22/
 curl -sS https://downloads.1password.com/linux/debian/debsig/1password.pol | sudo tee /etc/debsig/policies/AC2D62742012EA22/1password.pol
 sudo mkdir -p /usr/share/debsig/keyrings/AC2D62742012EA22
 curl -sS https://downloads.1password.com/linux/keys/1password.asc | sudo gpg --dearmor --output /usr/share/debsig/keyrings/AC2D62742012EA22/debsig.gpg
-sudo apt update && sudo apt install -y 1password
+sudo apt update && sudo apt install -yq 1password
